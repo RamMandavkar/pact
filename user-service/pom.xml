@@ -39,7 +39,7 @@
 		<dependency>
 			<groupId>au.com.dius</groupId>
 			<artifactId>pact-jvm-provider-spring_2.12</artifactId>
-			<version>3.5.24</version>			
+			<version>3.5.24</version>
 		</dependency>
 	</dependencies>
 
@@ -64,18 +64,18 @@
 	<build>
 		<plugins>
 
-			<!-- <plugin> -->
-			<!-- <groupId>org.apache.maven.plugins</groupId> -->
-			<!-- <artifactId>maven-surefire-plugin</artifactId> -->
-			<!-- <version>3.0.0-M3</version> -->
-			<!-- <configuration> -->
-			<!-- <systemProperties> -->
-			<!-- <property> -->
-			<!-- <pact.verifier.publishResults>true</pact.verifier.publishResults> -->
-			<!-- </property> -->
-			<!-- </systemProperties> -->
-			<!-- </configuration> -->
-			<!-- </plugin> -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M3</version>
+				<configuration>
+					<systemProperties>
+						<property>
+							<pact.verifier.publishResults>true</pact.verifier.publishResults>
+						</property>
+					</systemProperties>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>pl.project13.maven</groupId>
 				<artifactId>git-commit-id-plugin</artifactId>
@@ -108,14 +108,14 @@
 								<authentication>
 									<username>1y420c2dgiordukcuj0q</username>
 									<password>afz5erirkahwtnrfuevsu</password>
-								</authentication>								
+								</authentication>
 								<tags>
 									<tag>${build.number}</tag>
 								</tags>
 							</pactBroker>
 						</serviceProvider>
 					</serviceProviders>
-					<projectVersion>${project.version}-${git.commit.id.abbrev}</projectVersion>					
+					<projectVersion>${project.version}-${git.commit.id.abbrev}</projectVersion>
 				</configuration>
 			</plugin>
 
