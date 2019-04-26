@@ -74,9 +74,8 @@
 				<configuration>
 					<pactBrokerUrl>https://rammandavkar.pact.dius.com.au/</pactBrokerUrl>
 					<pactBrokerUsername>1y420c2dgiordukcuj0q</pactBrokerUsername>
-					<pactBrokerPassword>afz5erirkahwtnrfuevsu</pactBrokerPassword>
-<!-- 					<projectVersion>${project.version}-${git.commit.id.abbrev}</projectVersion> -->					
-					<projectVersion>${project.version}-${git.commit}</projectVersion>
+					<pactBrokerPassword>afz5erirkahwtnrfuevsu</pactBrokerPassword>					
+					<projectVersion>${project.version}-${git.commit.id.abbrev}</projectVersion>
 					<tags>
 						<tag>${build.number}</tag>
 					</tags>
