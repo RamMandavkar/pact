@@ -64,18 +64,7 @@
 	<build>
 		<plugins>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.0.0-M3</version>
-				<configuration>
-					<systemProperties>
-						<property>
-							<pact.verifier.publishResults>true</pact.verifier.publishResults>
-						</property>
-					</systemProperties>
-				</configuration>
-			</plugin>
+			
 <!-- 			<plugin> -->
 <!-- 				<groupId>pl.project13.maven</groupId> -->
 <!-- 				<artifactId>git-commit-id-plugin</artifactId> -->
@@ -93,6 +82,7 @@
 <!-- 					<dotGitDirectory>${project.basedir}/.git</dotGitDirectory> -->
 <!-- 				</configuration> -->
 <!-- 			</plugin> -->
+
 			<plugin>
 				<groupId>au.com.dius</groupId>
 				<artifactId>pact-jvm-provider-maven_2.11</artifactId>
@@ -119,6 +109,20 @@
 					<trimSnapshot>true</trimSnapshot>
 				</configuration>
 			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M3</version>
+				<configuration>
+					<systemProperties>
+						<property>
+							<pact.verifier.publishResults>true</pact.verifier.publishResults>
+						</property>
+					</systemProperties>
+				</configuration>
+			</plugin>
+			
 
 		</plugins>
 	</build>
