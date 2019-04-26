@@ -49,23 +49,25 @@
 	<build>
 		<finalName>${project.artifactId}-${project.version}-${git.commit.id.abbrev}</finalName>
 		<plugins>
-			<plugin>
-				<groupId>pl.project13.maven</groupId>
-				<artifactId>git-commit-id-plugin</artifactId>
-				<version>2.2.6</version>
-				<executions>
-					<execution>
-						<id>get-the-git-infos</id>
-						<goals>
-							<goal>revision</goal>
-						</goals>
-						<phase>validate</phase>
-					</execution>
-				</executions>
-				<configuration>
-					<dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
-				</configuration>
-			</plugin>
+		<!-- Plugin nor required in case GIT_COMMIT need to fetch from Jenkins  -->
+<!-- 			<plugin> -->
+<!-- 				<groupId>pl.project13.maven</groupId> -->
+<!-- 				<artifactId>git-commit-id-plugin</artifactId> -->
+<!-- 				<version>2.2.6</version> -->
+<!-- 				<executions> -->
+<!-- 					<execution> -->
+<!-- 						<id>get-the-git-infos</id> -->
+<!-- 						<goals> -->
+<!-- 							<goal>revision</goal> -->
+<!-- 						</goals> -->
+<!-- 						<phase>validate</phase> -->
+<!-- 					</execution> -->
+<!-- 				</executions> -->
+<!-- 				<configuration> -->
+<!-- 					<dotGitDirectory>${project.basedir}/.git</dotGitDirectory> -->
+<!-- 				</configuration> -->
+<!-- 			</plugin> -->
+
 			<plugin>
 				<groupId>au.com.dius</groupId>
 				<artifactId>pact-jvm-provider-maven_2.12</artifactId>
@@ -75,7 +77,8 @@
 					<pactBrokerUrl>https://rammandavkar.pact.dius.com.au/</pactBrokerUrl>
 					<pactBrokerUsername>1y420c2dgiordukcuj0q</pactBrokerUsername>
 					<pactBrokerPassword>afz5erirkahwtnrfuevsu</pactBrokerPassword>					
-					<projectVersion>${project.version}-${git.commit.id.abbrev}</projectVersion>
+<!-- 					<projectVersion>${project.version}-${git.commit.id.abbrev}</projectVersion> -->
+					<projectVersion>${project.version}-${git.commit}</projectVersion>
 					<tags>
 						<tag>${build.number}</tag>
 					</tags>
