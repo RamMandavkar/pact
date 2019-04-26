@@ -1,2 +1,5 @@
+server:
+  port: 8070
+  
 user-service:
   base-url: "http://localhost:8090"
