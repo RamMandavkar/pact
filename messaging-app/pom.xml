@@ -82,7 +82,7 @@
 					<tags>
 						<tag>${build.number}</tag>
 					</tags>
-					<trimSnapshot>false</trimSnapshot>
+					<trimSnapshot>true</trimSnapshot>
 				</configuration>
 			</plugin>
 		</plugins>
