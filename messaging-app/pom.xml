@@ -78,10 +78,11 @@
 					<pactBrokerUsername>1y420c2dgiordukcuj0q</pactBrokerUsername>
 					<pactBrokerPassword>afz5erirkahwtnrfuevsu</pactBrokerPassword>					
 <!-- 					<projectVersion>${project.version}-${git.commit.id.abbrev}</projectVersion> -->
-					<projectVersion>${project.version}-${git.commit}</projectVersion>
+					<projectVersion>${project.ver}-${git.commit}</projectVersion>
 					<tags>
 						<tag>${build.number}</tag>
 					</tags>
+					<trimSnapshot>false</trimSnapshot>
 				</configuration>
 			</plugin>
 		</plugins>
