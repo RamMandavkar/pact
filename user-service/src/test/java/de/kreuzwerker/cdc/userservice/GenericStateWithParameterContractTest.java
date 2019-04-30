@@ -15,6 +15,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import au.com.dius.pact.provider.junit.Provider;
 import au.com.dius.pact.provider.junit.State;
 import au.com.dius.pact.provider.junit.loader.PactBroker;
+import au.com.dius.pact.provider.junit.loader.PactBrokerAuth;
 import au.com.dius.pact.provider.junit.target.Target;
 import au.com.dius.pact.provider.junit.target.TestTarget;
 import au.com.dius.pact.provider.spring.SpringRestPactRunner;
@@ -24,7 +25,11 @@ import au.com.dius.pact.provider.spring.target.SpringBootHttpTarget;
 @Provider("user-service")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 //pact_broker is the service name in docker-compose
-@PactBroker(host = "pact_broker", tags = "${pactbroker.tags:prod}")
+@PactBroker(host="rammandavkar.pact.dius.com.au", 
+protocol="https", 
+tags="20", 
+authentication = @PactBrokerAuth(username = "1y420c2dgiordukcuj0q", password = "afz5erirkahwtnrfuevsu"))
+
 public class GenericStateWithParameterContractTest {
 
     @TestTarget
