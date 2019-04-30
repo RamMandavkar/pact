@@ -55,7 +55,7 @@ public class GenericStateWithParameterContractTest {
             when(userService.findUser(any())).thenThrow(NotFoundException.class);
         }
     }
-
+/*
   @State("non-existing-user")
   public void nonExistingUserState(Map<String, Object> params) throws ParseException {
       final boolean userExists = (boolean) params.get("userExists");
@@ -67,6 +67,6 @@ public class GenericStateWithParameterContractTest {
           when(userService.findUser(any())).thenThrow(NotFoundException.class);
       }
   }
-
+*/
 }
 

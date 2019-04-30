@@ -98,7 +98,7 @@ public class UserServiceGenericStateWithParameterContractTest {
             .extracting(Friend::getId, Friend::getName)
             .containsExactly(Tuple.tuple("2", "a friend"), Tuple.tuple("2", "a friend"));
     }
-
+/*
     @PactVerification(fragment = "pactUserDoesNotExist")
     @Test
     public void userDoesNotExist() {
@@ -107,4 +107,5 @@ public class UserServiceGenericStateWithParameterContractTest {
 
         userServiceClient.getUser("1");
     }
+*/    
 }
