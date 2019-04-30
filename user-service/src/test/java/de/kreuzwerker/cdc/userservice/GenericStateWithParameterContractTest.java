@@ -27,7 +27,7 @@ import au.com.dius.pact.provider.spring.target.SpringBootHttpTarget;
 //pact_broker is the service name in docker-compose
 @PactBroker(host="rammandavkar.pact.dius.com.au", 
 protocol="https", 
-tags="20", 
+tags="22", 
 authentication = @PactBrokerAuth(username = "1y420c2dgiordukcuj0q", password = "afz5erirkahwtnrfuevsu"))
 
 public class GenericStateWithParameterContractTest {
