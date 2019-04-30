@@ -53,7 +53,7 @@ public class GenericStateWithParameterContractTest {
 
   @State("non-existing-user")
   public void nonExistingUserState(Map<String, Object> params) throws ParseException {
-      final boolean userExists = (boolean) params.get("non-existing-user");
+      final boolean userExists = (boolean) params.get("userExists");
       if (userExists) {        	
           when(userService.findUser(any())).thenReturn(User.builder()
               .id("2")
