@@ -101,6 +101,8 @@ public class UserServiceContractTest {
             .containsExactly(Tuple.tuple("2", "a friend"), Tuple.tuple("2", "a friend"));
     }
 
+    
+    
 //    @PactVerification(fragment = "pactUserDoesNotExist")
 //    @Test
 //    public void userDoesNotExist() {
