@@ -74,18 +74,18 @@ public class UserServiceContractTest {
 
     }
 
-    @Pact(consumer = "messaging-app")
-    public RequestResponsePact pactUserDoesNotExist(PactDslWithProvider builder) {
-
-        return builder.given(
-            "User 2 does not exist")
-            .uponReceiving("A request to /users/2")
-            .path("/users/2")
-            .method("GET")
-            .willRespondWith()
-            .status(404)
-            .toPact();
-    }
+//    @Pact(consumer = "messaging-app")
+//    public RequestResponsePact pactUserDoesNotExist(PactDslWithProvider builder) {
+//
+//        return builder.given(
+//            "User 2 does not exist")
+//            .uponReceiving("A request to /users/2")
+//            .path("/users/2")
+//            .method("GET")
+//            .willRespondWith()
+//            .status(404)
+//            .toPact();
+//    }
 
     @PactVerification(fragment = "pactUserExists")
     @Test
@@ -101,12 +101,12 @@ public class UserServiceContractTest {
             .containsExactly(Tuple.tuple("2", "a friend"), Tuple.tuple("2", "a friend"));
     }
 
-    @PactVerification(fragment = "pactUserDoesNotExist")
-    @Test
-    public void userDoesNotExist() {
-        expandException.expect(HttpClientErrorException.class);
-        expandException.expectMessage("404 Not Found");
-
-        userServiceClient.getUser("2");
-    }
+//    @PactVerification(fragment = "pactUserDoesNotExist")
+//    @Test
+//    public void userDoesNotExist() {
+//        expandException.expect(HttpClientErrorException.class);
+//        expandException.expectMessage("404 Not Found");
+//
+//        userServiceClient.getUser("2");
+//    }
 }
